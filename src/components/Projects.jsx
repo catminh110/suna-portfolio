@@ -26,12 +26,12 @@ const Projects = () => {
       live: "https://github.com/catminh110"
     },
     {
-      title: "Adult Census Income Classifier",
-      description: "An end-to-end machine learning classification pipeline predicting whether individuals exceed $50K/year in income. Features exploratory data analysis and deployment via Flask.",
+      title: "Causal Fairness Engine",
+      description: "An algorithmic research framework for measuring and auditing fairness in machine learning predictions using causal inference models, causal graphs, and counterfactual reasoning.",
       image: taskBoardImg,
-      tags: ["Scikit-Learn", "Pandas", "NumPy", "Seaborn", "Flask", "Python"],
-      github: "https://github.com/catminh110/Adult-Cencus-Income",
-      live: "https://github.com/catminh110/Adult-Cencus-Income"
+      tags: ["Causal Inference", "Python", "NetworkX", "ML Fairness", "Jupyter"],
+      github: "https://github.com/catminh110/causal-fairness-engine",
+      live: "https://github.com/catminh110/causal-fairness-engine"
     }
   ];
 

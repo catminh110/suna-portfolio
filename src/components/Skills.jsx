@@ -11,9 +11,10 @@ const Skills = () => {
         "PyTorch", 
         "TensorFlow & Keras", 
         "Scikit-Learn", 
-        "Computer Vision (OpenCV)", 
-        "Face Mesh (MediaPipe)", 
+        "Causal Inference & ML Fairness", 
+        "Computer Vision (OpenCV / MediaPipe)", 
         "Contextual Bandits (LinUCB)", 
+        "Time Series Forecasting", 
         "WandB (Experiment Log)", 
         "Multimodal Fusion"
       ]
