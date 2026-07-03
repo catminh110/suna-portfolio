@@ -60,10 +60,10 @@ const Contact = () => {
           <div className="lg:col-span-5 flex flex-col justify-between text-left space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-white tracking-wide">
-                Let's launch a project
+                Let's connect!
               </h3>
               <p className="text-gray-400 leading-relaxed max-w-sm">
-                Have a job opening, a project idea, or just want to talk about system scaling? Drop me a message and I'll warp right back to you.
+                I'm always open to discussing AI research, study collaborations, internship opportunities, or just sharing knowledge. Drop me a message and I'll warp right back to you!
               </p>
             </div>
 
