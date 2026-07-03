@@ -27,24 +27,23 @@ const Skills = () => {
         "Microsoft SQL Server", 
         "SQL Queries", 
         "C++", 
-        "TypeScript", 
         "NumPy & Pandas", 
         "SciPy & Joblib", 
         "Flask & Web API"
       ]
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Environments",
       icon: <Wrench className="w-5 h-5 text-pink-400" />,
       skills: [
         "Git & GitHub", 
-        "React", 
-        "Three.js (WebGL / R3F)", 
-        "GSAP (Web Animations)", 
-        "Jupyter & Colab", 
-        "Docker", 
-        "Linux Shell",
-        "HTML5 & CSS3"
+        "Jupyter Notebook", 
+        "Google Colab", 
+        "VS Code", 
+        "Linux Shell", 
+        "Docker",
+        "Anaconda & Conda",
+        "Virtual Environments (venv)"
       ]
     }
   ];
