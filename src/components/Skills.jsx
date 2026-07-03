@@ -7,17 +7,44 @@ const Skills = () => {
     {
       title: "AI & Deep Learning",
       icon: <Cpu className="w-5 h-5 text-purple-400" />,
-      skills: ["PyTorch", "TensorFlow & Keras", "Machine Learning", "Deep Learning", "Computer Vision (OpenCV)", "NLP & Hugging Face"]
+      skills: [
+        "PyTorch", 
+        "TensorFlow & Keras", 
+        "Scikit-Learn", 
+        "Computer Vision (OpenCV)", 
+        "Face Mesh (MediaPipe)", 
+        "Contextual Bandits (LinUCB)", 
+        "WandB (Experiment Log)", 
+        "Multimodal Fusion"
+      ]
     },
     {
       title: "Languages & Database",
       icon: <Database className="w-5 h-5 text-cyan-400" />,
-      skills: ["Python", "Microsoft SQL Server", "SQL Queries", "C++", "NumPy & Pandas", "Scikit-Learn"]
+      skills: [
+        "Python", 
+        "Microsoft SQL Server", 
+        "SQL Queries", 
+        "C++", 
+        "TypeScript", 
+        "NumPy & Pandas", 
+        "SciPy & Joblib", 
+        "Flask & Web API"
+      ]
     },
     {
       title: "Tools & Platforms",
       icon: <Wrench className="w-5 h-5 text-pink-400" />,
-      skills: ["Git & GitHub", "Jupyter Notebook", "Google Colab", "VS Code", "Linux Shell", "Docker"]
+      skills: [
+        "Git & GitHub", 
+        "React", 
+        "Three.js (WebGL / R3F)", 
+        "GSAP (Web Animations)", 
+        "Jupyter & Colab", 
+        "Docker", 
+        "Linux Shell",
+        "HTML5 & CSS3"
+      ]
     }
   ];
 

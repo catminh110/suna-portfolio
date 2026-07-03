@@ -10,28 +10,28 @@ import orbitTrackerImg from '../assets/orbit_tracker.png';
 const Projects = () => {
   const projects = [
     {
-      title: "Nebula Task Board",
-      description: "A collaborative Kanban workflow tool featuring real-time state persistence, drag-and-drop mechanics, and custom project analytics dashboards.",
-      image: taskBoardImg,
-      tags: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com",
-      live: "https://example.com"
-    },
-    {
-      title: "Cyberpunk Gear Shop",
-      description: "A high-performance digital ecommerce store showcasing science-fiction items with animated cart controls, secure checkout, and dark cyber aesthetics.",
+      title: "Multimodal Drowsiness Detection",
+      description: "A real-time safety system combining raw facial images (CNNs) and facial landmark indicators like EAR & MAR (MediaPipe Face Mesh) to classify driver fatigue. Logs runs on WandB.",
       image: cyberShopImg,
-      tags: ["React", "Framer Motion", "Tailwind CSS", "PostgreSQL", "Stripe"],
-      github: "https://github.com",
-      live: "https://example.com"
+      tags: ["PyTorch", "MediaPipe", "OpenCV", "WandB", "Flask", "Python"],
+      github: "https://github.com/catminh110",
+      live: "https://github.com/catminh110"
     },
     {
-      title: "Galactic Orbit Tracker",
-      description: "An interactive telemetry application that traces real-time astronomical trajectories, simulates planet drift, and graphs orbital vectors.",
+      title: "Contextual Bandits LTR",
+      description: "A reinforcement learning search recommendation system implementing the LinUCB contextual bandit algorithm for Learning to Rank (LTR). Simulates dynamic user click-through interactions.",
       image: orbitTrackerImg,
-      tags: ["React", "Vite", "Tailwind CSS", "D3.js", "Web APIs"],
-      github: "https://github.com",
-      live: "https://example.com"
+      tags: ["Python", "NumPy", "Pandas", "Matplotlib", "Jupyter Notebook"],
+      github: "https://github.com/catminh110",
+      live: "https://github.com/catminh110"
+    },
+    {
+      title: "Adult Census Income Classifier",
+      description: "An end-to-end machine learning classification pipeline predicting whether individuals exceed $50K/year in income. Features exploratory data analysis and deployment via Flask.",
+      image: taskBoardImg,
+      tags: ["Scikit-Learn", "Pandas", "NumPy", "Seaborn", "Flask", "Python"],
+      github: "https://github.com/catminh110/Adult-Cencus-Income",
+      live: "https://github.com/catminh110/Adult-Cencus-Income"
     }
   ];
 
