@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Multimodal Drowsiness Detection",
       description: "A real-time safety system combining raw facial images (CNNs) and facial landmark indicators like EAR & MAR (MediaPipe Face Mesh) to classify driver fatigue. Logs runs on WandB.",
       tags: ["PyTorch", "MediaPipe", "OpenCV", "WandB", "Flask", "Python"],
-      github: "https://github.com/catminh110"
+      github: "https://github.com/catminh110/multimodal-drowsiness-detection"
     },
     {
       title: "Contextual Bandits LTR",
