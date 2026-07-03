@@ -77,7 +77,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 hover:from-purple-300 hover:to-cyan-300 transition-all duration-300"
         >
           <Orbit className="h-6 w-6 text-cyan-400 animate-spin-slow" style={{ animationDuration: '10s' }} />
-          <span>SUNA.DEV</span>
+          <span>CATMINH.DEV</span>
         </div>
 
         {/* Desktop Menu */}

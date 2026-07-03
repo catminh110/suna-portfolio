@@ -75,8 +75,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 uppercase tracking-wider">Send a message</div>
-                  <a href="mailto:contact@suna.dev" className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors">
-                    contact@suna.dev
+                  <a href="mailto:catminhcaotran26102005@gmail.com" className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors">
+                    catminhcaotran26102005@gmail.com
                   </a>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 uppercase tracking-wider">Call channels</div>
-                  <div className="text-sm font-semibold text-white">+84 123 456 789</div>
+                  <div className="text-sm font-semibold text-white">+84 366616420</div>
                 </div>
               </div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-500 uppercase tracking-wider">Current Grid</div>
-                  <div className="text-sm font-semibold text-white">Milky Way Galaxy, Earth</div>
+                  <div className="text-sm font-semibold text-white">Hồ Chí Minh, Việt Nam</div>
                 </div>
               </div>
             </div>

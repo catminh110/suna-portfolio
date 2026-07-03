@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
 
 const Hero = () => {
-  const words = ["Full Stack Developer", "Cosmic Creator", "UI/UX Enthusiast", "React Specialist"];
+  const words = ["AI Student", "Machine Learning Enthusiast", "Deep Learning Builder", "PyTorch Developer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -79,7 +79,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight"
           >
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 text-glow">Suna</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 text-glow">Cát Minh</span>
           </motion.h1>
 
           <motion.h2
@@ -97,7 +97,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-gray-400 max-w-xl text-base sm:text-lg leading-relaxed"
           >
-            A passionate developer focused on crafting beautiful, interactive digital systems. I build responsive frontends and resilient backends under the starry grid.
+            A third-year Artificial Intelligence student driven by curiosity and continuous learning. Focused on designing neural networks, analyzing data, and developing AI-powered solutions.
           </motion.p>
 
           {/* Action Buttons */}
@@ -129,17 +129,14 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex items-center gap-6 pt-4 text-gray-400"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" aria-label="GitHub">
+            <a href="https://github.com/catminh110" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" aria-label="GitHub">
               <GithubIcon className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/catminh110/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" aria-label="LinkedIn">
               <LinkedinIcon className="w-6 h-6" />
             </a>
-            <a href="mailto:contact@suna.dev" className="hover:text-cyan-400 transition-colors" aria-label="Email">
+            <a href="mailto:catminhcaotran26102005@gmail.com" className="hover:text-cyan-400 transition-colors" aria-label="Email">
               <Mail className="w-6 h-6" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors" aria-label="Twitter">
-              <TwitterIcon className="w-6 h-6" />
             </a>
           </motion.div>
         </div>

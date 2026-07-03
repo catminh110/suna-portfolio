@@ -28,7 +28,7 @@ const Footer = () => {
           className="flex items-center gap-2 cursor-pointer font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 hover:from-purple-300 hover:to-cyan-300 transition-all duration-300"
         >
           <Orbit className="h-5 w-5 text-cyan-400" />
-          <span>SUNA.DEV</span>
+          <span>CATMINH.DEV</span>
         </div>
 
         {/* Links */}
@@ -42,23 +42,20 @@ const Footer = () => {
 
         {/* Social Badges */}
         <div className="flex items-center gap-6 text-gray-400">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
+          <a href="https://github.com/catminh110" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="GitHub">
             <GithubIcon className="w-5 h-5" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/catminh110/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="LinkedIn">
             <LinkedinIcon className="w-5 h-5" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Twitter">
-            <TwitterIcon className="w-5 h-5" />
-          </a>
-          <a href="mailto:contact@suna.dev" className="hover:text-white transition-colors" aria-label="Email">
+          <a href="mailto:catminhcaotran26102005@gmail.com" className="hover:text-white transition-colors" aria-label="Email">
             <Mail className="w-5 h-5" />
           </a>
         </div>
 
         {/* Copyright */}
         <div className="text-xs text-gray-500">
-          © {new Date().getFullYear()} SUNA.DEV. All rights reserved. Created with cosmic energy.
+          © {new Date().getFullYear()} CATMINH.DEV. All rights reserved. Created with cosmic energy.
         </div>
       </div>
     </footer>

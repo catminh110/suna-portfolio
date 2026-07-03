@@ -1,23 +1,23 @@
 import React from 'react';
-import { Sparkles, Code, Server, Wrench, Shield, Database, Layout } from 'lucide-react';
+import { Sparkles, Cpu, Database, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      icon: <Layout className="w-5 h-5 text-purple-400" />,
-      skills: ["React", "JavaScript (ES6+)", "Tailwind CSS", "Next.js", "HTML5 & CSS3", "Framer Motion"]
+      title: "AI & Deep Learning",
+      icon: <Cpu className="w-5 h-5 text-purple-400" />,
+      skills: ["PyTorch", "TensorFlow & Keras", "Machine Learning", "Deep Learning", "Computer Vision (OpenCV)", "NLP & Hugging Face"]
     },
     {
-      title: "Backend & Database",
-      icon: <Server className="w-5 h-5 text-cyan-400" />,
-      skills: ["Node.js", "Express", "Python", "RESTful APIs", "PostgreSQL", "MongoDB"]
+      title: "Languages & Database",
+      icon: <Database className="w-5 h-5 text-cyan-400" />,
+      skills: ["Python", "Microsoft SQL Server", "SQL Queries", "C++", "NumPy & Pandas", "Scikit-Learn"]
     },
     {
-      title: "Tools & Ecosystem",
+      title: "Tools & Platforms",
       icon: <Wrench className="w-5 h-5 text-pink-400" />,
-      skills: ["Git & GitHub", "Vite", "Docker", "Figma", "npm / yarn / uv", "Postman"]
+      skills: ["Git & GitHub", "Jupyter Notebook", "Google Colab", "VS Code", "Linux Shell", "Docker"]
     }
   ];
 

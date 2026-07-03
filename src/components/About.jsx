@@ -1,28 +1,28 @@
 import React from 'react';
-import { Cpu, Rocket, Code2, ShieldAlert, Sparkles, BookOpen } from 'lucide-react';
+import { Cpu, Code2, Sparkles, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About = () => {
   const cards = [
     {
-      icon: <Code2 className="w-6 h-6 text-purple-400" />,
-      title: "Clean Code",
-      description: "Writing readable, maintainable, and well-structured code is my top priority."
+      icon: <Cpu className="w-6 h-6 text-purple-400" />,
+      title: "Model Development",
+      description: "Designing and training custom neural networks for diverse scientific research topics."
     },
     {
-      icon: <Cpu className="w-6 h-6 text-cyan-400" />,
-      title: "System Architecture",
-      description: "Designing structured client-server systems with solid data layers."
+      icon: <BookOpen className="w-6 h-6 text-cyan-400" />,
+      title: "AI Research",
+      description: "Analyzing academic papers and implementing architectures to solve complex topics."
     },
     {
-      icon: <Rocket className="w-6 h-6 text-pink-400" />,
-      title: "Optimized Performance",
-      description: "Ensuring speedy load times, lightweight bundle sizing, and smooth FPS."
+      icon: <Code2 className="w-6 h-6 text-pink-400" />,
+      title: "Data Engineering",
+      description: "Cleaning dataset pipelines and query manipulation using Python and MS SQL."
     },
     {
-      icon: <BookOpen className="w-6 h-6 text-emerald-400" />,
-      title: "Constant Learning",
-      description: "Exploring new frameworks, runtime environments, and modern algorithms daily."
+      icon: <Sparkles className="w-6 h-6 text-emerald-400" />,
+      title: "Continuous Growth",
+      description: "Constantly expanding skills in deep learning, math, and general software frameworks."
     }
   ];
 
@@ -49,24 +49,24 @@ const About = () => {
           {/* Biography Block */}
           <div className="lg:col-span-6 space-y-6 text-left">
             <h3 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
-              Who is Suna?
+              Who is Cát Minh?
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              I am a digital explorer based under the cosmic grid, designing responsive web ecosystems. My passion lies at the intersection of logical functionality and premium visuals.
+              I am a third-year Artificial Intelligence student approaching graduation. While I am still building my professional industry experience, I possess solid core skills to develop AI systems and research projects in various domains.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              With a strong background in JavaScript, React, and server-side infrastructure, I turn complex problems into clear, production-ready applications. When I'm not writing code, I study advanced architectures and experiment with real-time browser canvas structures.
+              Driven by curiosity and continuous self-improvement, I dedicate myself daily to refining my technical skills and expanding my knowledge. I am committed to polishing my understanding of neural networks, data modeling, and mathematical algorithms to solve real-world problems.
             </p>
 
             {/* Quick Specs */}
             <div className="grid grid-cols-2 gap-6 pt-4">
               <div className="border-l-2 border-purple-500 pl-4 space-y-1">
                 <div className="text-2xl font-extrabold text-white">3+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Years Active</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Projects Completed</div>
               </div>
               <div className="border-l-2 border-cyan-400 pl-4 space-y-1">
-                <div className="text-2xl font-extrabold text-white">15+</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wider">Projects Completed</div>
+                <div className="text-2xl font-extrabold text-white">1 Year</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wider">Project Development Exp</div>
               </div>
             </div>
           </div>
