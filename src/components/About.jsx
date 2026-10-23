@@ -6,29 +6,33 @@ const About = () => {
   const cards = [
     {
       icon: <Cpu className="w-6 h-6 text-purple-400" />,
-      title: "Model Development",
-      description: "Designing and training custom neural networks for diverse scientific research topics."
+      title: 'Model Development',
+      description:
+        'Designing and training custom neural networks for diverse scientific research topics.',
     },
     {
       icon: <BookOpen className="w-6 h-6 text-cyan-400" />,
-      title: "AI Research",
-      description: "Analyzing academic papers and implementing architectures to solve complex topics."
+      title: 'AI Research',
+      description:
+        'Analyzing academic papers and implementing architectures to solve complex topics.',
     },
     {
       icon: <Code2 className="w-6 h-6 text-pink-400" />,
-      title: "Data Engineering",
-      description: "Cleaning dataset pipelines and query manipulation using Python and MS SQL."
+      title: 'Data Engineering',
+      description:
+        'Cleaning dataset pipelines and query manipulation using Python and MS SQL.',
     },
     {
       icon: <Sparkles className="w-6 h-6 text-emerald-400" />,
-      title: "Continuous Growth",
-      description: "Constantly expanding skills in deep learning, math, and general software frameworks."
-    }
+      title: 'Continuous Growth',
+      description:
+        'Constantly expanding skills in deep learning, math, and general software frameworks.',
+    },
   ];
 
   return (
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="relative py-24 z-10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">

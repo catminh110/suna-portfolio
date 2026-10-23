@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Mail, Orbit } from 'lucide-react';
+import { ArrowRight, Mail, Orbit, FileDown } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
+
+const WORDS = [
+  'AI Student',
+  'Machine Learning Enthusiast',
+  'Deep Learning Builder',
+  'PyTorch Developer',
+];
 
 const Hero = () => {
-  const words = ["AI Student", "Machine Learning Enthusiast", "Deep Learning Builder", "PyTorch Developer"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(100);
 
   useEffect(() => {
-    const activeWord = words[currentWordIndex];
+    const activeWord = WORDS[currentWordIndex];
     let timer;
 
     if (isDeleting) {
@@ -33,11 +39,11 @@ const Hero = () => {
       timer = setTimeout(() => setIsDeleting(true), 1500);
     } else if (isDeleting && displayedText === '') {
       setIsDeleting(false);
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      setCurrentWordIndex((prev) => (prev + 1) % WORDS.length);
     }
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, currentWordIndex]);
+  }, [displayedText, isDeleting, currentWordIndex, typingSpeed]);
 
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
@@ -56,8 +62,8 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden z-10"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 items-center w-full">
@@ -114,6 +120,15 @@ const Hero = () => {
               Explore Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
+            <a
+              href="/Cao_Tran_Cat_Minh_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl border border-cyan-500/35 hover:border-cyan-400/70 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 font-semibold text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
+            >
+              <FileDown className="w-4 h-4" />
+              Download CV
+            </a>
             <button
               onClick={() => handleScrollTo('contact')}
               className="px-6 py-3 rounded-xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition-all duration-300 cursor-pointer transform hover:-translate-y-0.5"

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Orbit, Sparkles } from 'lucide-react';
+import { Menu, X, Orbit, FileDown } from 'lucide-react';
+
+const NAV_ITEMS = [
+  { label: 'Home', id: 'home' },
+  { label: 'About', id: 'about' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Contact', id: 'contact' },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
-  const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
-    { label: 'Projects', id: 'projects' },
-    { label: 'Contact', id: 'contact' },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
       }
 
       // Scroll Spy active page marker
-      const sections = navItems.map(item => document.getElementById(item.id));
+      const sections = NAV_ITEMS.map((item) => document.getElementById(item.id));
       const scrollPosition = window.scrollY + 200;
 
       for (let i = 0; i < sections.length; i++) {
@@ -34,7 +34,7 @@ const Navbar = () => {
           const sectionHeight = section.offsetHeight;
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            setActiveSection(navItems[i].id);
+            setActiveSection(NAV_ITEMS[i].id);
             break;
           }
         }
@@ -72,17 +72,19 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <div 
-          onClick={() => handleNavClick('home')} 
+        <button
+          type="button"
+          onClick={() => handleNavClick('home')}
+          aria-label="Scroll to top"
           className="flex items-center gap-2 cursor-pointer font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 hover:from-purple-300 hover:to-cyan-300 transition-all duration-300"
         >
           <Orbit className="h-6 w-6 text-cyan-400 animate-spin-slow" style={{ animationDuration: '10s' }} />
           <span>CATMINH.DEV</span>
-        </div>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
@@ -96,6 +98,15 @@ const Navbar = () => {
               )}
             </button>
           ))}
+          <a
+            href="/Cao_Tran_Cat_Minh_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl border border-purple-500/40 hover:border-cyan-400/60 bg-purple-500/10 hover:bg-cyan-500/15 text-xs font-semibold text-white hover:text-cyan-300 transition-all duration-300 flex items-center gap-1.5"
+          >
+            <FileDown className="w-4 h-4 text-cyan-400" />
+            <span>Download CV</span>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -104,6 +115,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-300 hover:text-white transition-colors cursor-pointer"
             aria-label="Toggle Navigation Menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -113,11 +125,11 @@ const Navbar = () => {
       {/* Mobile Drawer Menu */}
       <div
         className={`fixed inset-0 top-[73px] w-full bg-space-dark/95 backdrop-blur-lg border-b border-white/5 transition-all duration-300 md:hidden overflow-hidden ${
-          isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[380px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-6 py-6 flex flex-col gap-4">
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
@@ -128,6 +140,16 @@ const Navbar = () => {
               {item.label}
             </button>
           ))}
+          <a
+            href="/Cao_Tran_Cat_Minh_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="mt-2 px-4 py-3 rounded-xl bg-gradient-to-r from-purple-600/80 to-cyan-600/80 text-white font-semibold text-sm flex items-center justify-center gap-2"
+          >
+            <FileDown className="w-4 h-4" />
+            <span>Download CV</span>
+          </a>
         </div>
       </div>
     </nav>

@@ -8,6 +8,8 @@ export const GithubIcon = ({ className = "w-5 h-5", ...props }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
     className={className}
     {...props}
   >
@@ -24,6 +26,8 @@ export const LinkedinIcon = ({ className = "w-5 h-5", ...props }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
     className={className}
     {...props}
   >
@@ -41,6 +45,8 @@ export const TwitterIcon = ({ className = "w-5 h-5", ...props }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-hidden="true"
+    focusable="false"
     className={className}
     {...props}
   >

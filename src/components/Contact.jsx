@@ -1,44 +1,94 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle, sending, success, error
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (status === 'error') {
+      setStatus('idle');
+      setErrorMessage('');
+    }
   };
 
-  const handleSubmit = (e) => {
+  const mailtoHref = `mailto:catminhcaotran26102005@gmail.com?subject=${encodeURIComponent(
+    `Portfolio Contact from ${formData.name || 'Visitor'}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+  )}`;
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
-    setStatus('sending');
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setStatus('error');
+      setErrorMessage(
+        'Direct form service (VITE_WEB3FORMS_ACCESS_KEY) is not configured yet. Click the button below to open your email client with your message pre-filled.'
+      );
+      return;
+    }
 
-    // Simulate sending message
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Trigger canvas-confetti blast
-      confetti({
-        particleCount: 120,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#a855f7', '#06b6d4', '#ec4899', '#ffffff']
+    setStatus('sending');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+        }),
       });
 
-      // Reset state after a few seconds
-      setTimeout(() => setStatus('idle'), 5000);
-    }, 1500);
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+
+        // Trigger canvas-confetti blast
+        confetti({
+          particleCount: 120,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#a855f7', '#06b6d4', '#ec4899', '#ffffff'],
+        });
+
+        // Reset state after a few seconds
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setErrorMessage(
+          result.message ||
+            'Unable to transmit your message right now. Please use the quick email button below so your message is not lost.'
+        );
+      }
+    } catch {
+      setStatus('error');
+      setErrorMessage(
+        'Connection interrupted while beaming your message. Please use the quick email button below to send your message directly.'
+      );
+    }
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="relative py-24 z-10 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
@@ -162,6 +212,29 @@ const Contact = () => {
                       placeholder="Beam your message here..."
                     />
                   </div>
+
+                  {status === 'error' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      role="alert"
+                      className="p-4 rounded-xl bg-pink-500/10 border border-pink-500/30 text-sm text-pink-200 space-y-3"
+                    >
+                      <div className="flex items-start gap-3">
+                        <AlertCircle className="w-5 h-5 text-pink-400 shrink-0 mt-0.5" />
+                        <p className="leading-relaxed">{errorMessage}</p>
+                      </div>
+                      <div className="pt-1">
+                        <a
+                          href={mailtoHref}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-semibold text-cyan-300 hover:text-cyan-200 transition-all duration-300"
+                        >
+                          <Mail className="w-4 h-4" />
+                          <span>Send via Email (catminhcaotran26102005@gmail.com)</span>
+                        </a>
+                      </div>
+                    </motion.div>
+                  )}
 
                   <button
                     type="submit"
